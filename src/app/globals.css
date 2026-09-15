@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora", "Manrope", ui-sans-serif, sans-serif;
+
+  --color-bg: #f2f1ea;
+  --color-surface: #fbfaf6;
+  --color-card: #fefdfa;
+  --color-ink: #222923;
+  --color-ink-soft: #5d675f;
+  --color-ink-faint: #8a938b;
+  --color-line: #e2dfd2;
+  --color-line-soft: #eceadf;
+
+  --color-primary: #226b50;
+  --color-primary-strong: #1a523d;
+  --color-primary-soft: #e2efe6;
+
+  --color-night: #15231c;
+  --color-night-soft: #21362b;
+  --color-night-line: #2d4536;
+  --color-night-text: #b8c9bd;
+
+  --color-warn: #b45309;
+  --color-warn-soft: #fcf1de;
+  --color-danger: #b3372b;
+  --color-danger-soft: #fae9e6;
+  --color-teal: #1f5f66;
+  --color-teal-soft: #e0efef;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.tnum {
+  font-variant-numeric: tabular-nums;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: #cfcbbc;
+  border-radius: 8px;
+  border: 2px solid var(--color-bg);
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.toast-in {
+  animation: toast-in 0.18s ease-out both;
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+.modal-in {
+  animation: modal-in 0.16s ease-out both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in 0.15s ease-out both;
+}
