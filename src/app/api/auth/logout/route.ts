@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { destroySession } from "@/lib/auth";
 
 export async function POST() {

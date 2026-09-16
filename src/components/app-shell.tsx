@@ -33,11 +33,16 @@ export function AppShell({
   const pathname = usePathname();
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [online, setOnline] = useState(true);
+  const [online, setOnline] = useState(() => {
+    try {
+      return navigator.onLine;
+    } catch {
+      return true;
+    }
+  });
   const [loggingOut, setLoggingOut] = useState(false);
 
   useEffect(() => {
-    setOnline(navigator.onLine);
     const up = () => {
       setOnline(true);
       toast("Koneksi pulih — data kembali tersinkron.", "success");
@@ -50,10 +55,6 @@ export function AppShell({
       window.removeEventListener("offline", down);
     };
   }, []);
-
-  useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
 
   const nav: NavItem[] = [
     {

@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { redirect } from "next/navigation";
 import type { ReactNode } from "react";
 import { AppShell } from "@/components/app-shell";

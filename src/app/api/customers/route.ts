@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { db } from "@/db";
 import { customers } from "@/db/schema";
 import {

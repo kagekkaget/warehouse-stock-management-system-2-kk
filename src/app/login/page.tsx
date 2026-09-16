@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { redirect } from "next/navigation";
 import { getSessionUser } from "@/lib/auth";
 import { LoginForm } from "./login-form";

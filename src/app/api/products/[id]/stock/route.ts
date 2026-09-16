@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { eq, sql } from "drizzle-orm";
 import { db } from "@/db";
 import { products, stockMovements } from "@/db/schema";
