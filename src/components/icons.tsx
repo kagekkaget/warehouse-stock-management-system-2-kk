@@ -208,3 +208,27 @@ export const IconBrand = (p: P) => (
     <path d="M8 5.4l8.4 4.9" />
   </svg>
 );
+
+export const IconCoffee = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M18 8h1a4 4 0 0 1 0 8h-1" />
+    <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" />
+    <path d="M6 1v3M10 1v3M14 1v3" />
+  </svg>
+);
+
+export const IconCode = (p: P) => (
+  <svg {...base(p)}>
+    <path d="m18 16 4-4-4-4" />
+    <path d="m6 8-4 4 4 4" />
+    <path d="m14.5 4-5 16" />
+  </svg>
+);
+
+export const IconExternalLink = (p: P) => (
+  <svg {...base(p)}>
+    <path d="M15 3h6v6" />
+    <path d="M10 14 21 3" />
+    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h6" />
+  </svg>
+);
